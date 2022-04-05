@@ -4,7 +4,7 @@ function Person({ id, name, number }) {
   return (
     <li key={id}>
       <p>
-        {name} --> {number}
+        {name} - {number}
       </p>
     </li>
   );

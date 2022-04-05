@@ -1,0 +1,21 @@
+.addForm {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    background-color: hsl(240, 25%, 98%);
+    color: hsl(270, 100%, 4%);
+    width: 46vw;
+    align-items: center;
+    padding: 2em 1em;
+}
+
+.add-label {
+    color: hsl(270, 100%, 4%);
+    margin-bottom: 0.54rem;
+}
+
+.add-input {
+    width: 53%;
+    color: hsl(270, 100%, 4%);
+    margin-bottom: 0.54rem;
+}

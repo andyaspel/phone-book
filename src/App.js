@@ -66,7 +66,7 @@ function App() {
   };
 
   return (
-    <div className="App">
+    <div className="app-cont">
       <h1>Phone book</h1>
       <p>search person</p>
       <PersonFiltered person={persons} />
