@@ -4,8 +4,8 @@
     justify-content: center;
     background-color: hsl(240, 25%, 98%);
     color: hsl(270, 100%, 4%);
-    width: 46vw;
-    align-items: center;
+    width: 83vw;
+    align-items: flex-start;
     padding: 2em 1em;
 }
 
@@ -15,7 +15,23 @@
 }
 
 .add-input {
-    width: 53%;
+
+    width: 30%;
     color: hsl(270, 100%, 4%);
     margin-bottom: 0.54rem;
+}
+
+.name-error {
+    display: inline;
+    border: 3px solid hsl(0, 95%, 30%);
+    border-radius: 5px;
+    margin-left: 1rem;
+    padding: 0.24em 0.45em;
+    color: hsl(0, 11%, 2%);
+    text-transform: uppercase;
+    width: fit-content;
+}
+
+.person-list {
+    color: hsl(240, 25%, 98%);
 }

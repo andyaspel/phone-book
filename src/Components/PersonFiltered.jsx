@@ -1,4 +1,5 @@
 import React from "react";
+import "./personStyle.css";
 
 function PersonFiltered({ value, onSubmit, onChange }) {
   return (

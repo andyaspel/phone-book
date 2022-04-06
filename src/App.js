@@ -17,7 +17,9 @@ function App() {
     number: "",
     id: null,
     errormsg: "",
+    isActive: null,
   });
+  // const [isActive, setActive] = useState("true");
 
   // function checkName(str, arr) {
   //   arr.filter((i) => {
@@ -28,19 +30,21 @@ function App() {
   //     return null;
   //   });
   // }
-  let id = persons[persons.length - 1].id;
-  let nameError = "";
+  // let id = persons[persons.length - 1].id;
+  // let nameError = "";
 
   const handleChange = ({ target }) => {
     let { name, value } = target;
-
+    let id = persons[persons.length - 1].id;
+    let nameError = "";
+    let toggle = null;
     name = name.substr(11);
     persons.filter((i) => {
       if (i.name === value) {
-        nameError = "name already exist!!";
-        console.log(i.name);
-        console.log(nameError);
-        return setFormData({ ...formData, errormsg: nameError });
+        nameError = "name already exists!!";
+        toggle = "name-error";
+        // setActive(!isActive);
+        return setFormData({ errormsg: nameError, isActive: toggle });
       }
       console.log(formData);
 
@@ -51,6 +55,8 @@ function App() {
       ...formData,
       [name]: value,
       id: id + 1,
+      errormsg: nameError,
+      isActive: toggle,
     });
   };
 
@@ -64,7 +70,7 @@ function App() {
       return [...prev, formData];
     });
   };
-
+  console.log(formData.isActive);
   return (
     <div className="app-cont">
       <h1>Phone book</h1>
@@ -72,6 +78,7 @@ function App() {
       <PersonFiltered person={persons} />
       <h2>Add new contact</h2>
       <PersonForm
+        isActive={formData.isActive}
         onSubmit={handleSubmit}
         onChange={handleChange}
         numberValue={formData.number}
