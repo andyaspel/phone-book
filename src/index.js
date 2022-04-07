@@ -9,7 +9,7 @@ import App from "./App";
 // must be the ID of the div element in your index.html file
 const rootElement = document.getElementById("root");
 const root = createRoot(rootElement);
-console.log(root, rootElement);
+
 root.render(
   <StrictMode>
     <App />

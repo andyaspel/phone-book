@@ -1,9 +1,9 @@
 import React from "react";
 import "./personStyle.css";
 
-function PersonFiltered({ value, onSubmit, onChange }) {
+function PersonFiltered({ value, onChange }) {
   return (
-    <form onSubmit={onSubmit}>
+    <form>
       <label htmlFor="filter-contacts">Search: </label>
       <input
         id="filter-contacts"

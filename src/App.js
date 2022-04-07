@@ -19,19 +19,6 @@ function App() {
     errormsg: "",
     isActive: null,
   });
-  // const [isActive, setActive] = useState("true");
-
-  // function checkName(str, arr) {
-  //   arr.filter((i) => {
-  //     if (i.name === str) {
-  //       console.log(false);
-  //       return "name already exist!!";
-  //     }
-  //     return null;
-  //   });
-  // }
-  // let id = persons[persons.length - 1].id;
-  // let nameError = "";
 
   const handleChange = ({ target }) => {
     let { name, value } = target;
@@ -43,11 +30,8 @@ function App() {
       if (i.name === value) {
         nameError = "name already exists!!";
         toggle = "name-error";
-        // setActive(!isActive);
         return setFormData({ errormsg: nameError, isActive: toggle });
       }
-      console.log(formData);
-
       return formData;
     });
 
@@ -62,15 +46,12 @@ function App() {
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    // if (!checkName(formData.name, persons)) {
-    //   return ;
-    // }
     setPersons((prev) => {
       setFormData({ name: "", number: "", id: null, errormsg: "" });
       return [...prev, formData];
     });
   };
-  console.log(formData.isActive);
+
   return (
     <div className="app-cont">
       <h1>Phone book</h1>
