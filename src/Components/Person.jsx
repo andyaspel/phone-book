@@ -1,5 +1,4 @@
-import React from "react";
-import "./personStyle.css";
+// import "./personStyle.css";
 
 function Person({ id, name, number }) {
   return (

@@ -1,15 +1,13 @@
-import "./personStyle.css";
-
 function PersonForm({
   isActive,
   errormsg,
   nameValue,
   numberValue,
-  onChange,
-  onSubmit,
+  handleChange,
+  handleSubmit,
 }) {
   return (
-    <form onSubmit={onSubmit} className="addForm">
+    <form onSubmit={handleSubmit} className="addForm">
       <div>
         <label htmlFor="phone-book-name" className="add-label">
           Contact name:{" "}
@@ -19,7 +17,7 @@ function PersonForm({
           name="phone-book-name"
           value={nameValue}
           type="text"
-          onChange={onChange}
+          onChange={handleChange}
           className="add-input"
         />
         <p className={isActive}> {errormsg}</p>
@@ -33,7 +31,7 @@ function PersonForm({
           name="phone-book-number"
           value={numberValue}
           type="tel"
-          onChange={onChange}
+          onChange={handleChange}
           className="add-input"
         />
       </div>

@@ -2,7 +2,9 @@
   display: flex;
   flex-direction: column;
   justify-content: space-around;
+  align-items: center;
   width: 100%;
+  height: 100%;
   background-color: hsl(243, 27%, 70%);
   padding: 2em 1.3em;
 }

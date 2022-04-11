@@ -1,17 +1,23 @@
-import React from "react";
-import "./personStyle.css";
+// import "./personStyle.css";
 
-function PersonFiltered({ value, onChange }) {
+function PersonFiltered({
+  isActive,
+  errormsg,
+  text,
+  handleChange,
+  handleSubmit,
+}) {
   return (
-    <form>
+    <form onSubmit={handleSubmit}>
       <label htmlFor="filter-contacts">Search: </label>
       <input
         id="filter-contacts"
-        name="filter-contacs"
-        value={value}
-        type="search"
-        onChange={onChange}
+        name="filter-contacts"
+        value={text}
+        type="text"
+        onChange={handleChange}
       />
+      <p className={isActive}> {errormsg}</p>
     </form>
   );
 }

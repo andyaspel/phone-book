@@ -1,37 +1,39 @@
 .addForm {
     display: flex;
     flex-direction: column;
-    justify-content: center;
+    justify-content: space-around;
     background-color: hsl(240, 25%, 98%);
     color: hsl(270, 100%, 4%);
-    width: 83vw;
-    align-items: flex-start;
+    width: 63%;
+    align-items: center;
     padding: 2em 1em;
 }
 
 .add-label {
     color: hsl(270, 100%, 4%);
-    margin-bottom: 0.54rem;
+    text-align: right;
+    /* padding-bottom: 1.74em; */
+    /* width: 79%; */
 }
 
 .add-input {
-
-    width: 30%;
+    /* width: 79%; */
     color: hsl(270, 100%, 4%);
-    margin-bottom: 0.54rem;
+    /* padding-bottom: 0.54em; */
 }
 
 .name-error {
-    display: inline;
     border: 3px solid hsl(0, 95%, 30%);
     border-radius: 5px;
-    margin-left: 1rem;
-    padding: 0.24em 0.45em;
+    /* padding-left: 1em; */
+    padding: 0.24em 0.45em 0.24em, 1em;
     color: hsl(0, 11%, 2%);
     text-transform: uppercase;
-    width: fit-content;
+    /* width: 100%; */
 }
 
 .person-list {
     color: hsl(240, 25%, 98%);
+    padding: 0.24em 0.45em 0.24em, 1em;
+
 }
